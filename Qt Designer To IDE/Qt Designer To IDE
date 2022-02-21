@@ -1,0 +1,24 @@
+#--METHOD 1-------SYNCHRONIZED W MAIN UI FILE-------------
+
+from PyQt5.QtWidgets import * 
+from PyQt5.uic import *
+import sys
+
+class pencere(QWidget):
+	def __init__(self): 
+		super(pencere,self).__init__()
+		loadUi("ilk.ui",self)
+
+if __name__ == "__main__":
+	uygulama = QApplication(sys.argv) 
+	arayuz = pencere()
+	arayuz.show()
+	uygulama.exec()
+
+
+
+#--METHOD 2-------NOT SYNCHRONIZED W MAIN UI FILE-------------
+
+
+# write this to console and create a py file converted from ui
+	# pyuic5 -x ToBeConverted.ui -o AfterConverted.py
