@@ -1,0 +1,32 @@
+import math
+import os
+import random
+import re
+import sys
+
+arr = []
+
+for _ in range(6):
+	arr.append(list(map(int, input("gir: ").rstrip().split())))
+
+max_sum_hourglass = (-9*5)  # -63
+sum_hourglass=0
+
+def sum_current_hourglass(array, row, col):
+	sum_hourglass = 0
+	sum_hourglass += array[row-1][col-1]
+	sum_hourglass += array[row-1][col]
+	sum_hourglass += array[row-1][col+1]
+	sum_hourglass += array[row][col]
+	sum_hourglass += array[row+1][col-1]
+	sum_hourglass += array[row+1][col]
+	sum_hourglass += array[row+1][col+1]
+	return sum_hourglass
+
+for i in range(1,5):
+	for j in range(1,5):
+		sum_value = sum_current_hourglass(arr, i, j)
+		if sum_current_hourglass(arr, i, j) > max_sum_hourglass :
+			max_sum_hourglass = sum_current_hourglass
+
+print(max_sum_hourglass)
