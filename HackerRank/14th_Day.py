@@ -1,4 +1,4 @@
-#hackerrank day 14
+#hackerrank day 14 - Scope
 class Difference:
     def __init__(self, a):
         self.__elements = a
