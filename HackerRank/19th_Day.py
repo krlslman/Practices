@@ -1,3 +1,4 @@
+# Interfaces
 class AdvancedArithmetic(object):
     def divisorSum(n):
         raise NotImplementedError
