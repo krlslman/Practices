@@ -1,4 +1,4 @@
-# HACKERRANK DAY 12
+# HACKERRANK DAY 12 - Inheritance
 
 class Person:
 	def __init__(self, firstName, lastName, idNumber):
